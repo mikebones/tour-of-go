@@ -1,0 +1,7 @@
+https://go.dev/blog/using-go-modules
+dependency management system
+dep version info explicit and easier to manage
+a collection of packages stored in a file tree with go.mod file at root
+go.mod defines module path
+default in 1.16
+GOPATH is not recommended

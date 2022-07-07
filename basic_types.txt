@@ -1,0 +1,26 @@
+
+bool
+
+string
+
+int  int8  int16  int32  int64              // signed integers can hold positive or negative values
+uint uint8 uint16 uint32 uint64 uintptr     // unsigned integers can only hold positive numbers 
+
+byte // alias for uint8
+
+rune // alias for int32
+     // represents a Unicode code point
+     // https://stackoverflow.com/questions/17855774/go-rune-type-explanation
+
+float32 float64
+
+complex64 complex128
+
+// zero values
+/*
+
+0 for numeric types,
+false for the boolean type, and
+"" (the empty string) for strings.
+
+*/

@@ -1,0 +1,12 @@
+export GOPROXY=direct
+brew install golangci-lint
+# initialize a module
+go mod init tour-of-go/m/v2
+# format go
+go fmt
+https://awesome-go.com/
+# learn go with tests
+https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/hello-world
+
+# system design primer
+https://github.com/donnemartin/system-design-primer
