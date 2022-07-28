@@ -1,0 +1,6 @@
+michael@costas
+email
+not an email
+this@email.com
+also.valid@email.com
+some @invalid email
