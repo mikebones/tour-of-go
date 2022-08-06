@@ -66,10 +66,26 @@ func scanEmails(path string) {
 	// compile regex
 	regexEmail := regexp.MustCompile("[A-z0-9._]+@[A-z0-9._]")
 	scanner := bufio.NewScanner(file)
+//	scanner.Split(bufio.ScanRunes)
+	go regexEmailScan(*scanner, *regexEmail)
 	for scanner.Scan() {
-		regexEmail.FindString(scanner.Text())
-	}
+		if regexEmail.FindString(scanner.Text()) != "" {
+			fmt.Printf("%s\n", scanner.Text())
+		}	
+	}	
 	if scanner.Err() != nil {
 		panic(scanner.Err())
 	}
 }
+
+func regexEmailScan(scanner bufio.Scanner, regexEmail regexp.Regexp) {
+	for scanner.Scan() {
+		if regexEmail.FindString(scanner.Text()) != "" {
+			fmt.Printf("%s\n", scanner.Text())
+		}	
+	}
+
+}
+// it could be faster to load the entire file into ram and run regex on it
+// if the file is huge we could run it line by line but this could be an io issue with disk
+// if we try to break this up into smaller chunks then do we have an issue of not catching our regex
