@@ -1,0 +1,10 @@
+Lobby,0,Enter
+Hallway1,10,Enter
+Room1,30,Enter
+Room1,40,Exit
+Room1,50,Enter
+Room1,60,Exit
+Hallway1,90,Exit
+Hallway2,100,Enter
+Hallway2,150,Exit
+Lobby,160,Exit
